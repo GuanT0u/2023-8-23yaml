@@ -1,7 +1,7 @@
 import os
 
 def get_project_path():
-    project_name = "2023"
+    project_name = "2023-8-23yaml"
     filepath = os.path.dirname(__file__)
     return filepath[:filepath.find(project_name) + len(project_name)]
 

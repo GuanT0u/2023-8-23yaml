@@ -12,9 +12,12 @@ class GetConfig():
     def get_username_password(self):
         return self.env["username"], self.env["password"]
 
+    def get_url(self):
+        return self.env["url"]
+
 
 if __name__ == "__main__":
-    print(GetConfig().get_username_password())
+    print(GetConfig().get_username_password(), GetConfig().get_url())
 
 
 
