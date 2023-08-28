@@ -14,9 +14,10 @@ class Requests:
         self.s.mount = ("http://", HTTPAdapter(max_retries=3))
         self.s.mount = ("https://", HTTPAdapter(max_retries=3))
 
-        self.s.headers = headers
-        self.timeout = timeout
-        self.url = GetConfig().get_url()
+        # 公共的请求头设置
+        self.s.headers = headers  # .s: 从self.s = re.s继承过来的
+        self.timeout = timeout  # 自己定义的属性
+        self.url = GetConfig().get_url()  # 自己定义的属性
 
     def __del__(self):
         """

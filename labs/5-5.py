@@ -1,7 +1,7 @@
 import requests
 from common.yaml_config import GetConfig
 
-username, password = GetConfig().get_username_password()
+username, password = GetConfig().get_username_password("jay")
 
 url = GetConfig().get_url()
 
