@@ -3,7 +3,7 @@ from requests.adapters import HTTPAdapter
 from common.yaml_config import GetConfig
 
 class Requests:
-    def __init__(self, headers, timeout=10):
+    def __init__(self, headers=None, timeout=10):
         """
         requests封装
         Args:
