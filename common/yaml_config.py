@@ -15,7 +15,6 @@ class GetConfig():
     def get_url(self):
         return self.env["url"]
 
-
 if __name__ == "__main__":
     print(GetConfig().get_username_password("jay"), GetConfig().get_url())
 

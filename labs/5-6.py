@@ -13,4 +13,4 @@ headers = {
 # res = requests.post(url + "/api/wallet/get_wallet_info", headers=headers)
 # print(res.text)
 
-res = Requests.post()
+res = Requests(headers = headers).post("/api/wallet/get_wallet_info")
