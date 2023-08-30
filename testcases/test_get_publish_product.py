@@ -1,3 +1,4 @@
+import allure
 import pytest
 from common.common_requests import Requests
 
@@ -13,9 +14,12 @@ json = {
 class TestApi():
     @pytest.mark.get_publish_product
     def test_get_publish_product(self, token):
-        header = {
-            "token": token()
-        }
-        res = Requests(headers=header).post("/api/product/publish_product", json=json)
-        print(res.text)
+        with allure.step("登录"):
+            header = {
+                "token": token()
+            }
+        with allure.step("调取用户信息接口"):
+            res = Requests(headers=header).post("/api/product/publish_product", json=json)
+        with allure.step("打印结果"):
+            print(res.text)
 
